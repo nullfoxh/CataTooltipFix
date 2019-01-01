@@ -1,0 +1,7 @@
+## Interface: 40300
+## Title: |cffa0f6aaCataTooltipFix|r
+## Notes: 
+## Author: null
+## Version: 0.1
+
+CataTooltipFix.lua
