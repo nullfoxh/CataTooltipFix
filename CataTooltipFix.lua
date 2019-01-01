@@ -49,13 +49,6 @@
 		}, 
 	}
 
-	local function ReplaceHealing(obj)
-		local healing = match(obj:GetText(), "Increases healing done by up to (%d+) and damage done")
-		if healing then
-			obj:SetText(format("Equip: Increases healing done by spells and effects by up to %s.", healing))
-		end
-	end
-
 	local function ReplaceOther(obj, subdata)
 		for k, v in pairs(subdata) do
 			local str, count = gsub(obj:GetText(), v[1], v[2])
