@@ -134,7 +134,9 @@
 	hooksecurefunc(GameTooltip, "SetUnitDebuff", OnTipSetAura)
 
 	if AtlasLootTooltip then
-		if AtlasLootTooltip.HookScript2 then
-			AtlasLootTooltip:HookScript2("OnShow", function(self) OnTipSetItem(self, self:GetName()) end)
+		if AtlasLootTooltip:GetScript("OnShow") then
+			AtlasLootTooltip:HookScript("OnShow", function(self) OnTipSetItem(self, self:GetName()) end)
+		else
+			AtlasLootTooltip:SetScript("OnShow", function(self) OnTipSetItem(self, self:GetName()) end)
 		end
 	end
